@@ -12,12 +12,12 @@ function parse(html, rules, callback){
             rules.forEach(function (rule) {
                 var $els = $html.find('[style*="' + rule.styleContains + '"]');
                 $els.each(function (i, el) {
-                    $(this)
-                        .removeAttr('style')
-                        .removeAttr('class')
-                        .html('<' + rule.wrapWith + '>'+$(this).html()+'</' + rule.wrapWith + '>');
+                    $(this).html('<' + rule.wrapWith + '>'+$(this).html()+'</' + rule.wrapWith + '>');
                 });
             });
+
+            $html.find('[style]').removeAttr('style');
+            $html.find('[class]').removeAttr('class');
 
             callback($html.html());
         }
