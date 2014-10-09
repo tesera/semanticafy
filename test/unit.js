@@ -1,16 +1,6 @@
-semanticafy
-===========
+var sematicafy = require('../index.js');
+var should = require('should');
 
-simple module to make html more semantic
-
-pass in html with a set of rules and it will spit back semantic html based on your rules.
-
-##Install
-``npm install semanticafy``
-
-## Usage:
-
-````
 describe('sematicafy', function () {
     it('should remove <style>', function (done) {
         var html = '<style type="text/css"> .bold { font-weight:bold; } .italic { font-style:Italic; } </style><span class="bold">bolded text</span><span class="italic">italic text</span>';
@@ -30,6 +20,3 @@ describe('sematicafy', function () {
         });
     });
 });
-````
-
-
