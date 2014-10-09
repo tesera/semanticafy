@@ -1,10 +1,10 @@
 {
   "name": "semanticafy",
   "version": "0.0.1",
-  "description": "",
+  "description": "simple module to make html more semantic",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "css",
@@ -12,6 +12,10 @@
     "html",
     "semantic"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tesera/semanticafy.git"
+  },
   "author": "Yves Richard",
   "license": "MIT",
   "dependencies": {
