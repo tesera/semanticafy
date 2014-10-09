@@ -10,7 +10,7 @@ pass in html with a set of rules and it will spit back semantic html based on yo
 
 ## Usage:
 
-````
+````js
 describe('sematicafy', function () {
     it('should remove <style>', function (done) {
         var html = '<style type="text/css"> .bold { font-weight:bold; } .italic { font-style:Italic; } </style><span class="bold">bolded text</span><span class="italic">italic text</span>';
