@@ -14,7 +14,7 @@ describe('sematicafy', function () {
                 wrapWith: 'i'
             }
         ];
-        sematicafy.parse(html, rules, function (semHtml) {
+        sematicafy.parse(html, rules, function (err, semHtml) {
             semHtml.should.containEql('<span><strong>bolded text</strong></span><span><i>italic text</i></span>');
             done();
         });
@@ -32,7 +32,7 @@ describe('sematicafy', function () {
                 wrapWith: 'i'
             }
         ];
-        sematicafy.parse(html, rules, function (semHtml) {
+        sematicafy.parse(html, rules, function (err, semHtml) {
             semHtml.should.not.containEql('style');
             semHtml.should.not.containEql('class');
             done();

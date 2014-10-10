@@ -4,7 +4,7 @@ var $ = require('cheerio');
 function parse(html, rules, callback){
     juice.juiceContent(html, {url: 'http://avalanche.ca'}, function (err, res) {
         if (err) {
-            console.log(err);
+            callback(err);
         } else {
             // need to call toString here otherwise test does't work...?
             var $html = $(res.toString()).find('body');
@@ -19,7 +19,7 @@ function parse(html, rules, callback){
             $html.find('[style]').removeAttr('style');
             $html.find('[class]').removeAttr('class');
 
-            callback($html.html());
+            callback(null, $html.html());
         }
     });
 }
