@@ -1,6 +1,6 @@
 {
   "name": "semanticafy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple module to make html more semantic",
   "main": "index.js",
   "scripts": {
