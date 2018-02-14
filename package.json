@@ -19,7 +19,7 @@
   "author": "Yves Richard",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "~0.17.0",
+    "cheerio": "~0.20.0",
     "juice": "~0.5.0"
   },
   "devDependencies": {
